@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UserCenter.DTO\UserCenter.DTO.csproj" />
     <ProjectReference Include="..\UserCenter.Helper\UserCenter.Helper.csproj" />
     <ProjectReference Include="..\UserCenter.IService\UserCenter.IService.csproj" />
   </ItemGroup>

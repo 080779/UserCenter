@@ -9,7 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="2.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UserCenter.DTO\UserCenter.DTO.csproj" />
     <ProjectReference Include="..\UserCenter.Helper\UserCenter.Helper.csproj" />
     <ProjectReference Include="..\UserCenter.IService\UserCenter.IService.csproj" />
     <ProjectReference Include="..\UserCenter.Service\UserCenter.Service.csproj" />

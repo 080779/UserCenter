@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserCenter.DTO\UserCenter.DTO.csproj" />
+    <ProjectReference Include="..\UserCenter.Helper\UserCenter.Helper.csproj" />
+  </ItemGroup>
+
 </Project>
