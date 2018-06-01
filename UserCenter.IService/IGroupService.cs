@@ -6,9 +6,8 @@ using UserCenter.DTO;
 
 namespace UserCenter.IService
 {
-    public interface IAppInfoService:IServiceSupport
+    public interface IGroupService:IServiceSupport
     {
-        Task<AppInfoDTO> GetByAppKeyAsync(string appKey);
-        AppInfoDTO GetByAppKey(string appKey);
+        Task<GroupDTO[]> GetGroupByUserIdAsync(long id);
     }
 }

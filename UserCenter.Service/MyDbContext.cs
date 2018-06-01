@@ -1,13 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using UserCenter.Service.Config;
 using UserCenter.Service.Entity;
 
 namespace UserCenter.Service
 {
-    class MyDbContext:DbContext
+    [Serializable]
+    public class MyDbContext:DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
