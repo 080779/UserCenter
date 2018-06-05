@@ -33,6 +33,14 @@ namespace UserCenter.OpenApi
                 option.Filters.Add(typeof(UCAuthorizationFilter));
                 option.Filters.Add(typeof(UCExceptionFilter));
             });
+            services.AddCors(options=> {
+                options.AddPolicy("any",builder=> {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+                });
+            });
             //services.AddScoped<IAuthorizationFilter, UCAuthorizationFilter>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAppInfoService, AppInfoService>();
@@ -46,6 +54,7 @@ namespace UserCenter.OpenApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors("any");
             app.UseMvc(routes=> {
                 routes.MapRoute(
                     name:"Default",
