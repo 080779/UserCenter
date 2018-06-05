@@ -20,6 +20,15 @@ namespace UserCenter.OpenApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(option => 
+            {
+                option.AddPolicy("any", builder => {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+                });
+            });
             services.AddMvc(option => {
                 option.Filters.Add(typeof(UCAuthorizationFilter));
                 option.Filters.Add(typeof(UCExceptionFilter));
