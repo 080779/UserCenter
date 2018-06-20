@@ -10,7 +10,6 @@ using UserCenter.IService;
 namespace UserCenter.OpenApi.Controllers
 {
     //[Route("api/[controller]")]
-    [EnableCors("any")]
     public class ValuesController : Controller
     {
         private IUserService userService;
@@ -23,7 +22,6 @@ namespace UserCenter.OpenApi.Controllers
 
         // GET api/values/5
         [HttpGet]
-        [EnableCors("any")]
         public async Task<string> Post(string mobile, string password)
         {
             long res= await userService.Add(mobile,password);

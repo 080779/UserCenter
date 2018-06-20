@@ -1,0 +1,3 @@
+csprojÖĞÌí¼Ó
+
+<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>

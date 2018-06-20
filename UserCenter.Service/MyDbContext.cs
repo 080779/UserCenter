@@ -14,7 +14,8 @@ namespace UserCenter.Service
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySQL("Server=192.168.31.114;database=zszdb;uid=root;pwd=root");
+            //optionsBuilder.UseMySQL("Server=192.168.31.114;database=zszdb;uid=root;pwd=root");
+            optionsBuilder.UseMySQL("Server=192.168.1.104;database=zszdb;uid=root;pwd=root");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
