@@ -8,7 +8,7 @@ namespace FactorTest
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             ////方法一
             //AbsFruit absFruit = FruitFactory.CreateInstance<AbsFruit>("FactorTest", "Strawberry");
@@ -32,6 +32,21 @@ namespace FactorTest
             list.Sort((i,j)=>j-i);
             list.ForEach(c => Console.WriteLine(c.ToString()));
             Console.ReadKey();
+        }
+        static void Main(string[] args)
+        {
+            Type type= typeof(UserDTO);
+            string name = type.Name.Replace("DTO","Entity");
+            Type type1= Type.GetType("FactorTest.service.Person");
+            Object obj = Activator.CreateInstance(type1);
+            string guid= Guid.NewGuid().ToString();
+
+            //Type type1 = typeof(name);
+            Console.ReadKey();
+        }
+        public void Get<T>()
+        {
+            Console.WriteLine($"{typeof(T)}");
         }
     }
 }

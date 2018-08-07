@@ -20,7 +20,7 @@ namespace UserCenter.OpenApi
         public static IWebHost BuildWebHost(string[] args)
         {
             var parm = new ConfigurationBuilder().AddCommandLine(args).Build();
-            //获取命令行输入的ip和端口
+            //获取命令行输入的ip和端口,例：dotnet UserCenter.OpenApi.dll --ip 127.0.0.1 --port 5001
             string ip = parm["ip"];
             string port = parm["port"];
 

@@ -45,6 +45,9 @@
     <Compile Include="FruitFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\User.cs" />
+    <Compile Include="service\Group.cs" />
+    <Compile Include="service\Person.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

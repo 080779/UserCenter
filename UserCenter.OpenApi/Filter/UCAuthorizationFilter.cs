@@ -78,7 +78,7 @@ namespace UserCenter.OpenApi.Filter
 
         public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
         {
-            //context.Request.Headers.TryGetValues("AppKey", out appKeys)
+            //context.Request.Headers.TryGetValues("AppKey", out appKeys)  
             //context.Result = new UnauthorizedResult();
             var res = new ContentResult();
             StringValues values;
@@ -119,6 +119,7 @@ namespace UserCenter.OpenApi.Filter
             //orderedQS就是按照key（参数的名字）进行排序的QueryString集合
             //var orderedQS = context.HttpContext.Request.GetQueryNameValuePairs().OrderBy(kv => kv.Key);
             var orderedQS = context.HttpContext.Request.Query.OrderBy(q => q.Key);
+            var orderedQS1 = context.HttpContext.Request.Body;
             var segments = orderedQS.Select(q => q.Key + "=" + q.Value);//拼接key=value的数组
             string qs = string.Join("&", segments);//用&符号拼接起来
             string computedSign = CommonHelper.GetMD5(qs + appInfo.AppSecret);//计算qs+secret的md5值  用户传进来md5值和计算出来的比对一下，就知道数据是否有被篡改过

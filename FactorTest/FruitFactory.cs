@@ -37,4 +37,12 @@ namespace FactorTest
             Console.WriteLine("水果类型：" + Name);
         }
     }
+    public class UserDTO
+    {
+        public string Name { get; set; }
+    }
+    public class UserEntity
+    {
+        public string Name { get; set; }
+    }
 }
